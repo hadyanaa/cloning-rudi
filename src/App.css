@@ -662,7 +662,7 @@ img,video {
 }
 
 body {
-  cursor: url('./images/crusor_image.png'), url('./images/crusor_image.svg'), auto;
+  cursor: url('./images/crusor_new.png'), auto;
 }
 
 .bg-header {
