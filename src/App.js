@@ -54,7 +54,7 @@ function App() {
                <div className='flex justify-end pr-4 items-center w-1/3 md:w-1/5'>
                   <img src={logo} alt="logo" className='w-32 h-auto' />   
                </div>
-               <div className="w-1/3 md:hidden text-5xl text-center mt-2 font-semibold"> Duff </div>
+               <div className="w-1/3 md:hidden text-5xl text-center mt-2 font-semibold"> Corona </div>
                <div className='hidden font-sans md:flex gap-x-8 w-4/5 justify-center items-center h-full'>
                   <a href='#home-section' className='navButton'> HOME </a>
                   <a href='#about-section' className='navButton'> WHY $CORONA? </a>
