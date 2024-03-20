@@ -623,12 +623,17 @@ img,video {
 
 .text-simpsons {
   --tw-text-opacity: 1;
-  color: rgb(46 2 122 / var(--tw-text-opacity))
+  color: #041e57;
 }
 
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity))
+}
+
+.text-yellow {
+  --tw-text-opacity: 1;
+  color: rgb(255, 180, 0 / var(--tw-text-opacity));
 }
 
 .transition-all {
@@ -657,12 +662,11 @@ img,video {
 }
 
 body {
-  cursor: url('./crusor_image.png'),auto
+  cursor: url('./images/crusor_image.png') 20 20, auto;
 }
 
 .bg-header {
-  background-image: linear-gradient(120deg, #ebab34 0%, #ebba34 100%);
-  
+  background: -webkit-radial-gradient(center, circle cover, #fad046, #dfaa4e);
 }
 
 .bg {
@@ -672,7 +676,7 @@ body {
 }
 
 .bg-about {
-  background-image: url('./images/bg_phase.png');
+  background-image: url('./images/bg_beer.png');
   background-size: cover;
   background-position: center;
 }
@@ -681,6 +685,77 @@ body {
   background-image: url('./images/bg_tokenomics.png');
   background-size: cover;
   background-position: center;
+}
+
+.bg-roadmap {
+  background-image: url('./images/bg_phase.png');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Animasi Bubbles */
+.bubble-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Sesuaikan dengan tinggi container yang Anda inginkan */
+  overflow: visible;
+}
+
+.bubble {
+  position: absolute;
+  background-color: rgba(244, 2, 2, 0.5); /* Warna latar belakang gelembung */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  animation: bubbleAnimation 10s infinite linear;
+}
+
+@keyframes bubbleAnimation {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-150%) rotate(360deg);
+  }
+}
+
+/* Menentukan posisi dan ukuran untuk setiap gelembung */
+.bubble:nth-child(1) {
+  left: 10%;
+  width: 40px;
+  height: 40px;
+  animation-duration: 6s; /* Durasi animasi berbeda untuk setiap gelembung */
+}
+
+.bubble:nth-child(2) {
+  left: 30%;
+  width: 30px;
+  height: 30px;
+  animation-duration: 8s;
+}
+.bubble:nth-child(3) {
+  left: 20%;
+  width: 30px;
+  height: 30px;
+  animation-duration: 8s;
+}
+.bubble:nth-child(4) {
+  left: 60%;
+  width: 30px;
+  height: 30px;
+  animation-duration: 18s;
+}
+.bubble:nth-child(5) {
+  left: 80%;
+  width: 30px;
+  height: 30px;
+  animation-duration: 8s;
+}
+.bubble:nth-child(6) {
+  left: 25%;
+  width: 30px;
+  height: 30px;
+  animation-duration: 7s;
 }
 
 .only\:pr-20:only-child {
@@ -973,8 +1048,8 @@ canvas {
   justify-content: center;
   border-radius: .75rem;
   padding: .5rem 1rem;
-  font-size: 38px;
-  font-weight: 600;
+  font-size: 24px;
+  font-weight: 500;
   transition-property: all;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
   transition-duration: .2s
