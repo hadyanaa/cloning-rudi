@@ -623,7 +623,7 @@ img,video {
 
 .text-simpsons {
   --tw-text-opacity: 1;
-  color: rgb(253 203 0 / var(--tw-text-opacity))
+  color: rgb(46 2 122 / var(--tw-text-opacity))
 }
 
 .text-white {
@@ -653,15 +653,34 @@ img,video {
 
 @font-face {
   font-family: simpsons;
-  src: url('./assets/Simpsonfont-63e1a8b2.ttf')
+  src: url('./assets/Alice-in-Wonderland.ttf')
 }
 
 body {
-  cursor: url('./cursor.png'),auto
+  cursor: url('./crusor_image.png'),auto
+}
+
+.bg-header {
+  background-image: linear-gradient(120deg, #ebab34 0%, #ebba34 100%);
+  
 }
 
 .bg {
-  background-image: linear-gradient(120deg,#89f7fe 0%,#66a6ff 100%)
+  background-image: url('./images/bg_header.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-about {
+  background-image: url('./images/bg_phase.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-tokenomics {
+  background-image: url('./images/bg_tokenomics.png');
+  background-size: cover;
+  background-position: center;
 }
 
 .only\:pr-20:only-child {
