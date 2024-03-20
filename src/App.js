@@ -21,7 +21,7 @@ import corona from './images/corona_vs_beer.png';
 function App() {
    const textRef = useRef(null);
    const [copied, setCopied] = useState(false);
-   let CA = '0x0000000000000000000000';
+   let CA = '0x00000000000000000000000000000000000000';
 
     // Fungsi untuk menyalin teks ke clipboard
    const handleCopyClick = () => {
@@ -76,24 +76,24 @@ function App() {
                      <img className='max-w-96 h-auto' src={beer2} alt="beer muter"/>
                   </div>
                   <div className='w-full md:w-2/3 flex flex-col h-full justify-center items-center lg:items-start mt-10 md:mt-0 lg:pl-12'>
-                     <div className="text-5xl text-white md:text-[90px] lg:mt-4 font-medium"> Corona Beerus </div>
-                     <div className="text-black-outline text-white font-bold text-xl lg:text-3xl mt-4 lg:mb-2 font-sans text-black text-center lg:text-start"> "CAN'T GET ENOUGH OF <br/>THAT WONDERFULL CORONA BEERUS!" </div>
-                     <hr className='w-24 mt-2 border-white border-2'/>
-                     <div className="w-full flex flex-col items-center lg:items-start mt-4 text-black">
+                     <div className="text-5xl text-white md:text-[90px] lg:mt-8 font-medium"> Corona Beerus </div>
+                     <div className="text-black-outline text-white font-bold text-xl lg:text-3xl mt-8 lg:mb-2 font-sans text-black text-center lg:text-start"> "CAN'T GET ENOUGH OF <br/>THAT WONDERFULL CORONA BEERUS!" </div>
+                     <hr className='w-24 mt-4 border-white border-2'/>
+                     <div className="w-full flex flex-col items-center lg:items-start mt-8 text-black">
                         <div className="items-center justify-center w-full text-xl">
                            <div className="flex items-center justify-center lg:justify-start text-xs lg:text-2xl w-full">
-                              <div ref={textRef} className="mr-2 font-sans text-[#FFA500]">{copied ? 'Copied!' : 'CA:' + CA}</div>
+                              <div ref={textRef} className="mr-2 font-sans text-[#fad046]">{copied ? 'Copied!' : 'CA:' + CA}</div>
                               {!copied && <button className='w-6 rounded' onClick={handleCopyClick}>
                                  <img src={copy} alt="copy" />
                               </button>}
                            </div>
                         </div>
-                        <div className="flex items-center gap-x-6 mt-4">
-                           <a className="" href="https://x.com/duffoneth">
-                              <img className="w-10 h-10 z-10" src={twitter} alt="twitter" />
-                           </a>
+                        <div className="flex items-center gap-x-6 mt-8">
                            <a href="https://t.me/duffportal">
                               <img className="w-10 h-10 z-10" href="https://t.me/duffportal" src={telegram} alt="telegram" />
+                           </a>
+                           <a className="" href="https://x.com/duffoneth">
+                              <img className="w-10 h-10 z-10" src={twitter} alt="twitter" />
                            </a>
                            <a href="https://t.me/duffportal">
                               <img className="w-10 h-10 z-10" href="https://t.me/duffportal" src={ether} alt="etherscan" />
@@ -141,17 +141,31 @@ function App() {
 
             {/* tokenomics */}
             <div id='tokenomics-section' className='w-screen bg-tokenomics py-16 md:py-32 h-auto flex flex-col md:flex-row items-center justify-center px-8 md:px-32'>
-               <div className='md:w-1/2 flex justify-start'>
+               <div className='md:w-1/2 flex justify-center'>
                   <img className="w-full md:w-3/4 Duff-gif" src={tokenomics} alt='tokenomics' />
                </div>
                <div className="w-full md:w-1/2 flex flex-col mt-12 md:mt-0">
                   <div className="text-4xl md:text-6xl font-normal text-white"> Corona Nomics </div>
-                  <hr className='w-24 mt-2 border-white border-2'/>
+                  <hr className='w-24 mt-8 border-white border-2'/>
                   <div className="mt-4 font-sans md:mt-8 pl-1 only:pr-20 text-base text-white md:text-lg text-black"> 
-                     Tax's are 0/0 no bullshit here. <br/><br/> 
-                     Total Supply: 123,456,789 KEK <br/><br/> 
-                     93.1% To LP, LOCKED for 369 days. <br/><br/>
-                     6.9% Multisig Marketing &amp; CEX Wallet 
+                     <ul className='list-disc'>
+                        <li className='mb-2 flex items-center'>
+                           <div className='w-2 h-2 bg-[#fad046] rounded mr-4'></div>
+                           Tax's are 0/0 no bullshit here.
+                        </li>
+                        <li className='mb-2 flex items-center'>
+                           <div className='w-2 h-2 bg-[#fad046] rounded mr-4'></div>
+                           Total Supply: 123,456,789 KEK 
+                        </li>
+                        <li className='mb-2 flex items-center'>
+                           <div className='w-2 h-2 bg-[#fad046] rounded mr-4'></div>
+                           93.1% To LP, LOCKED for 369 days. 
+                        </li>
+                        <li className='mb-2 flex items-center'>
+                           <div className='w-2 h-2 bg-[#fad046] rounded mr-4'></div>
+                           6.9% Multisig Marketing &amp; CEX Wallet
+                        </li>
+                     </ul>
                   </div>
                </div>
             </div>
